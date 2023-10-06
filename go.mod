@@ -1,4 +1,4 @@
-module example.com
+module github.com/Nissekissen/GO-testing
 
 go 1.21.1
 
