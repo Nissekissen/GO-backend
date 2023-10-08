@@ -16,3 +16,10 @@ type Token struct {
 	AccessToken  string `json:"access_token" gorm:"unique;not null;default:null"`
 	RefreshToken string `json:"refresh_token" gorm:"unique;not null;default:null"`
 }
+
+type Post struct {
+	gorm.Model
+	Title   string `json:"title" gorm:"unique;not null;default:null"`
+	Content string `json:"content" gorm:"unique;not null;default:null"`
+	UserID  string `json:"user_id" gorm:"unique;not null;default:null"`
+}

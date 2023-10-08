@@ -14,4 +14,9 @@ func setupRoutes(app *fiber.App) {
 	app.Get("/callback", handlers.Callback)
 	app.Get("/refresh", handlers.Refresh)
 
+	app.Get("/posts", handlers.GetPosts)
+	app.Get("/posts/:id", handlers.GetPost)
+	app.Post("/posts", handlers.Authenticate, handlers.CreatePost)
+	app.Delete("/posts/:id", handlers.Authenticate, handlers.DeletePost)
+
 }
